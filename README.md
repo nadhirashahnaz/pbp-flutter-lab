@@ -5,7 +5,10 @@ Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelas
     - Stateful widget berlaku sebaliknya dimana sifatnya adalah dinamis, sehingga widget ini dapat diperbaharui kapanpun dibutuhkan berdasarkan user actions atau ketika terjadinya perubahan data. Contoh : text ganjil genap, text angka counter
 
 Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
-    - Text untuk meuliskan kata/kalimat
+    - Widget Text untuk menuliskan kata/kalimat genap,ganjil
+    - Widget Floatting action button untuk membuat tombol +/-
+    - Widget Padding untuk mengatur jarak antara widget
+    - Widget Visibility untuk mengatur kemunculan widget.
 
 Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
     -  setState() bertugas untuk memberitahu widget bahwa ada objek yang berubah pada State sehingga aplikasi akan memuat ulang widget tersebut dengan nilai yang sudah diubah. yang terdampak adalah stateful widget karena stateful widget tergantung pada perubahan, perubahannya ada pada text ganjil genap dan nilai counter serta button - jika counter 0
