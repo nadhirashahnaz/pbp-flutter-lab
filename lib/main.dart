@@ -1,32 +1,35 @@
 import 'package:flutter/material.dart';
+import 'tambah_budget.dart';
+import 'data_budget.dart';
+import 'drawer.dart';
+
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+    const MyApp({super.key});
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Program Counter'),
-    );
-  }
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+            primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(),
+        );
+    }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+    const MyHomePage({super.key});
 
-  final String title;
+    final String title = 'Flutter Demo Home Page';
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+    @override
+    State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -37,7 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-
   void _decrementCounter() {
     setState(() {
       _counter--;
@@ -48,9 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
+      title: Text(widget.title),
+    ),
+    //Drawer 
+    drawer: buildDrawer(context),
+
+    body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -71,9 +76,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 18,
                 )
               ),
-
-
-
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -82,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
 
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(left: 40),
         child: Row(
@@ -111,8 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
-      )
+      )  
 
     );
   }
+  
 }
