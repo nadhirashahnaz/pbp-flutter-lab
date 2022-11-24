@@ -20,12 +20,12 @@ class _MyWatchListDetailState extends State<MyWatchListDetail> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: const Text('Wacth Item Detail'),
+          title: const Text('Wacth List Detail'),
           elevation: 0,
         ),
         drawer: buildDrawer(context),
         body: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 20, 16, 14),
+          padding: const EdgeInsets.fromLTRB(16, 20, 16, 12),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -84,14 +84,14 @@ class _MyWatchListDetailState extends State<MyWatchListDetail> {
                             ),
                             Text(
                               widget.watchList.fields.watched
-                                  ? 'wacthed'
-                                  : 'not wacthed',
+                                  ? 'watch'
+                                  : 'not watch',
                             )
                           ],
                         ),
                         SizedBox(
-                          height: 14,
-                          width: 14,
+                          height: 12,
+                          width: 12,
                           child: Checkbox(
                             value: widget.watchList.fields.watched,
                             onChanged: (value) {
@@ -125,7 +125,7 @@ class _MyWatchListDetailState extends State<MyWatchListDetail> {
               ElevatedButton(
                 onPressed: () => Navigator.pop(context),
                 style: ElevatedButton.styleFrom(
-                    minimumSize: const Size.fromHeight(55)),
+                    minimumSize: const Size.fromHeight(50)),
                 child: const Text('Back'),
               ),
             ],

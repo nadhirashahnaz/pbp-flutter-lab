@@ -42,6 +42,7 @@ class _MyWatchListPageState extends State<MyWatchListPage> {
 
     super.initState();
     _remoteDataSource = WatchListRemoteDataSource();
+    print(_remoteDataSource);
     _futureWatchList = _remoteDataSource.fetchWatchList();
   }
 
@@ -97,7 +98,7 @@ class _MyWatchListPageState extends State<MyWatchListPage> {
                     child: Text(
                       "${snapshot.data![index].fields.title}",
                       style: const TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 18.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

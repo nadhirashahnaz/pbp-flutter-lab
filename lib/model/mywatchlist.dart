@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'dart:convert';
 
 List<WatchList> watchListFromJson(String str) => List<WatchList>.from(json.decode(str).map((x) => WatchList.fromJson(x)));
 
