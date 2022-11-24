@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
-import 'drawer.dart';
+import '../main.dart';
+import '../drawer.dart';
 import 'data_budget.dart';
 
 class TambahBudgetPage extends StatefulWidget {

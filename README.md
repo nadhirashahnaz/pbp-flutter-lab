@@ -1,4 +1,33 @@
 # counter_7
+
+TUGAS 9
+
+Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+    - Pengambilan data JSON tanpa membuat model dapat dilakukan namun bukan bestpractice. Karena dengan menggunakan model dapat meminimalisir kesalahan pengambilan data melalui http request.
+
+Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+    - Text : menampilkan text
+    - Column : menampilkan widget secara vertikal
+    - Row : menampilkan widget secara horizontal
+    - Container : membungkus widget
+    - Padding : jarak widget
+    - DropDownButton : dropdown menu jenis
+    - scaffold : landasan halaman
+    - FutureBuilder : menggenerate array of widget berdasarkan snapshot
+    - GestureDetector : mendeteksi gesture event
+
+ Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+    - Membuat function http reqquest dengan method GET. Pada function dilakukan parsing dengan jsonDecode() untuk mengubah response String jadi JSON. Konversi JSON ke model menggunakan FutureBuilder untuk menampilkan widget-widget
+
+  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+  - Membuat mywatchlist dan mywatchlis detail
+  - Membuat object WatchList
+  - Membuat remote data source 
+  - Menambahkan futurebuilder untuk menampilkan hasil GET
+  - Menambahkan gesturedetector untuk mendeteksi click event.
+
+
+
 TUGAS 8
 Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
     - Navigator.push menumpuk route teratas dengan widget baru, push tidak menghapus widget sebelumnya.

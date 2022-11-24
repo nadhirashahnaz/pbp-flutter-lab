@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'tambah_budget.dart';
-import 'data_budget.dart';
+import 'page/tambah_budget.dart';
+import 'page/data_budget.dart';
+import 'page/mywatchlist_page.dart';
 
 //buildDrawer menampilkan drawer
 Drawer buildDrawer(BuildContext context) {
@@ -41,6 +42,17 @@ Drawer buildDrawer(BuildContext context) {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const DataBudgetPage()),
+                );
+              },
+            ),
+            //3. drawer MyWatchList
+            ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchListPage()),
                 );
               },
             ),
