@@ -36,14 +36,14 @@ class Fields {
 
     bool watched;
     String title;
-    double rating;
+    String rating;
     String releaseDate;
     String review;
 
     factory Fields.fromJson(Map<String, dynamic> json) => Fields(
         watched: json["watched"],
         title: json["title"],
-        rating: json["rating"].toDouble(),
+        rating: json["rating"],
         releaseDate: json["release_date"],
         review: json["review"],
     );

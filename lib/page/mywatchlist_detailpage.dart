@@ -65,7 +65,7 @@ class _MyWatchListDetailState extends State<MyWatchListDetail> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text('${widget.watchList.fields.rating}/5')
+                        Text(widget.watchList.fields.rating)
                       ],
                     ),
                   ),
